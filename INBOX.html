@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Automatically generated HTML file from Doconce source
+(http://code.google.com/p/doconce/)
+-->
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Doconce: http://code.google.com/p/doconce/" />
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+<body bgcolor="white">
+    <title>Notizen zur Studienarbeit</title>
+<center><h1>Notizen zur Studienarbeit</h1></center>
+<center>
+<b>Marc P&#252;ls</b> 
+</center>
+
+<p>
+
+
+<center><h3>January 21, 2013</h3></center>
+<P>
+<h2>Aktuelle Aktion (nur eine erlaubt!) <a name="currentAction"></A></h2>
+<P>
+
+<P>
+Ausnahmsweise zwei Aktionen:
+
+<P>
+
+<ol>
+<li> In <tt>room_analysis_test.cpp</tt> in Zeile 543 weitermachen.
+</ol>
+<h2>Notizen <a name="notes"></A></h2>
+<P>
+
+<P>
+<h3>Unverararbeitete Notizen <a name="notes:unprocessed"></A></h3>
+<P>
+
+<P>
+<h3>Verarbeitete Notizen <a name="notes:processed"></A></h3>
+<P>
+
+<P>
+
+<ul>
+<li> (PROCESSED 26.01.13, siehe <a href="#ref:filestructure3dsa">Thema der Studienarbeit und Ordnerstruktur</a>):
+  Befehl zum Auschecken der getbot-Quellen:
+  <tt>svn co svn+ssh://mpuels@get.upb.de/proj/getbot/repos/trunk getbot</tt>
+<li> (PROCESSED 26.01.13, siehe <a href="#ref:filestructure3dsa">Thema der Studienarbeit und Ordnerstruktur</a>):
+  Mein Ordner: <tt>3dsa/room_analysis</tt>
+
+<ul>
+  <li> zun&#228;chst eine <tt>.cpp</tt> -Datei in <tt>3dsa/room_analysis/test</tt> erstellen
+  <li> dann implementierte Algorithmen in <tt>src</tt> und <tt>include</tt> aufteilen und
+    als Bibliothek zur Verf&#252;gung stellen
+</ul>
+
+<li> (PROCESSED 26.01.13, siehe <a href="#na:formalisieren">na:formalisieren</a>): Formalisieren
+<li> (PROCESSED 26.01.13, siehe <a href="#ref:lit:toshev10:notes">ref:lit:toshev10:notes</a>):
+  Volumen nicht wichtig (vgl. Toshev, 2010)
+<li> (PROCESSED 26.01.13, siehe <a href="#ref:filestructure3dsa">Thema der Studienarbeit und Ordnerstruktur</a>):
+  Patches als Grundlage der Untersuchungen
+<li> (PROCESSED 26.01.13, siehe <a href="#na:glossPatch">na:glossPatch</a>, <a href="#quest:diffPatchSegment">quest:diffPatchSegment</a>):
+  Patches sind nach einem Kriterium zusammengefasste Punktwolken
+<li> (PROCESSED 26.01.13): <a name="notes:SegmentVoxelVsModel"></A>
+  2 Ans&#228;tze bei Segmentierung
+  [<a href="#ref:persons:puels">ref:persons:puels</a>: Aussage von <a href="#ref:persons:kotthaeu">ref:persons:kotthaeu</a>]
+
+<ul>
+  <li> Voxelansatz (vgl. octree)
+  <li> Modelbased-Ansatz (vgl. Hough-Transformation, RANSAC)
+</ul>
+
+</ul>
+<h2>Actions <a name="actions"></A></h2>
+<P>
+
+<P>
+<h3>Do ASAP <a name="actions:ASAP"></A></h3>
+<P>
+
+<P>
+
+<ul>
+<li> <a href="#na:dokGet3Dcorner">na:dokGet3Dcorner</a>
+<li> 25.01.13:
+  Beispiele guter Abschlussarbeiten durcharbeiten und Eigenschaften guter
+  Arbeiten herausstellen. Siehe <a href="#ref:exampleTheses">Beispiele guter Abschlussarbeiten (25.01.13)</a>.
+<li> <a href="#proj:decisionCFGvsCRF:brainstorm">proj:decisionCFGvsCRF:brainstorm</a>
+<li> <a href="#proj:decisionCFGvsCRF:informKott">proj:decisionCFGvsCRF:informKott</a>
+<li> 26.01.13:
+  Gelesene Paper (<a href="#ref:lit:read">gelesen</a>) durcharbeiten nach Begriffen, die ins
+  <a href="#ref:gloss">Glossar</a> geh&#246;ren.
+<li> 26.01.13: <a name="na:formalisieren"></A>
+  Zu untersuchende Methode (CRF oder CFG) formalisieren.
+<li> 26.01.13: <a name="na:glossPatch"></A>
+  Begriff 'Patch' in <a href="#ref:gloss:patch">ref:gloss:patch</a> einf&#252;gen.
+<li> 26.01.13:
+  Begriff 'RANSAC' in <a href="#ref:gloss:ransac">ref:gloss:ransac</a> einf&#252;gen.
+<li> 26.01.13:
+  Begriff 'octree' in <a href="#ref:gloss:octree">ref:gloss:octree</a> einf&#252;gen.
+<li> 26.01.13:
+  Begriff 'Hough-Transformation' in <a href="#ref:gloss:houghtrans">ref:gloss:houghtrans</a> einf&#252;gen.
+<li> 26.01.13:
+  Folgende Punktwolken in den richtigen Abschnitt in dieses Dokument einordnen,
+  und zwar in <a href="#ref:pcd">Point Cloud Data</a>.
+  (Kotth&#228;user hat mir folgende Punktwolken gezeigt):
+
+<ul>
+  <li> <tt>/eda/media/pcd/indoor-sequence/indoor01-xyzi-binary.pcd</tt>
+  <li> <tt>/eda/media/pcd/indoor-sequence-ceilings/ceiling05.pcd</tt>
+</ul>
+
+<li> 26.01.13:
+  Tipp von Kotth&#228;user: <a href="http://matplotlib.org/gallery.html">Python-Lib</a>
+  zur Visualisierung von Daten. Python-Lib evaluieren.
+<li> 26.01.13:
+  aufbauend auf <a href="#ref:commentTypes">Kommentartypen beim Durcharbeiten von Papern</a> und anderen Quellen Richtlinien zum
+  Annotieren von Texten festlegen und hier ablegen.
+<li> 26.01.13:
+  Paperbuch anlegen, (wie Timo Korthals), in DIN A 4, einseitig bedruckt. Nur
+  durchgearbeitete Paper werden dort abgelegt.
+
+<ul>
+  <li> Workflow:
+
+<ol>
+   <li> digital auf Paper p zus&#228;tzliche Seitenzahlen drucken (dazu
+      selbstgeschriebenes Python-Skript verwenden)
+   <li> p einseitig ausdrucken
+   <li> p durcharbeiten und handschriftliche Notizen machen
+   <li> p in Paperbuch abheften
+   <li> Inhaltsverzeichnis von Paperbuch aktualisieren
+</ol>
+
+</ul>
+
+</ul>
+<h3>Scheduled Actions <a name="actions:scheduled"></A></h3>
+<P>
+
+<P>
+<h3>Delegated Actions <a name="actions:delegated"></A></h3>
+<P>
+
+<P>
+<h3>Done <a name="actions:done"></A></h3>
+<P>
+
+<P>
+
+<ul>
+<li> 26.01.13 (DONE 26.01.13):
+  Begriff 'Segmentierung' in <a href="#ref:gloss:segmentierung">ref:gloss:segmentierung</a> einf&#252;gen.
+<li> 26.01.13 (DONE 26.01.13):
+  Link zum GET-Wiki hier einpflegen, z.B. in <a href="#ref:filestructure3dsa">Thema der Studienarbeit und Ordnerstruktur</a>.
+</ul>
+<h2>Someday / Maybe <a name="somedayMaybe"></A></h2>
+<P>
+
+<P>
+
+<ul>
+<li> <a href="#ref:lit:lafferty01">ref:lit:lafferty01</a> durcharbeiten (f&#252;r CRF), falls ich mich f&#252;r die
+  CRF-Methode entscheide.
+<li> <a href="#ref:lit:sutton06">ref:lit:sutton06</a> durcharbeiten (f&#252;r CRF), falls ich mich f&#252;r die
+  CRF-Methode entscheide.
+<li> <a href="#ref:lit:klinger07">ref:lit:klinger07</a> durcharbeiten (f&#252;r CRF), falls ich mich f&#252;r die
+  CRF-Methode entscheide.
+</ul>
+<h2>Fragen <a name="quest"></A></h2>
+<P>
+
+<P>
+<h3>offen <a name="quest:open"></A></h3>
+<P>
+
+<P>
+<h4>unsortiert <a name="quest:open:unsorted"></A></h4>
+<P>
+
+<P>
+<h4>an Kotth&#228;user <a name="quest:open:toKott"></A></h4>
+<P>
+
+<P>
+
+<ul>
+<li> <a href="#quest:planeExtractorSegment">quest:planeExtractorSegment</a>
+<li> <a href="#quest:segment">quest:segment</a>
+<li> <a href="#quest:splitHull">quest:splitHull</a>
+<li> 21.1.2013: <a name="quest:diffPatchSegment"></A>
+  Was ist der Unterschied zwischen einem Patch und einem Segment? Siehe
+  <a href="#ref:gloss:patch">ref:gloss:patch</a>, <a href="#ref:gloss:segmentierung">ref:gloss:segmentierung</a> <a href="#ref:gloss:segment">ref:gloss:segment</a>.
+<li> <a href="#quest:clusterSegments">quest:clusterSegments</a>
+<li> <a href="#quest:ceilingBorders">quest:ceilingBorders</a>
+<li> <a href="#quest:getOrderedNodes">quest:getOrderedNodes</a>
+<li> 26.01.13:
+  Laut <a href="#ref:internetsources:pclSegmentationMethods">ref:internetsources:pclSegmentationMethods</a> gibt es eine ganze Reihe
+  von Segmentierungsverfahren und -kriterien. Was meint
+  <a href="#ref:persons:kotthaeu">ref:persons:kotthaeu</a> also mit der Aussage <a href="#notes:SegmentVoxelVsModel">notes:SegmentVoxelVsModel</a>?
+</ul>
+<h4>an mich (Recherche) <a name="quest:open:toMe"></A></h4>
+<P>
+
+<P>
+<h3>beantwortet <a name="quest:answered"></A></h3>
+<P>
+
+<P>
+<h4>von Kotth&#228;user <a name="quest:answered:byKott"></A></h4>
+<P>
+
+<P>
+<h4>von mir (Recherche) <a name="quest:answered:byMe"></A></h4>
+<P>
+
+<P>
+
+<ul>
+<li> 21.1.2013: Warum sind die Implementierungen von Klassen in .hpp-Dateien?
+
+<ul>
+  <li> 21.1.2013: Wegen Nutzung von Templates geht es nicht anders. Siehe
+    auch <a href="http://stackoverflow.com/a/2143606">hier</a>.
+</ul>
+
+<li> <a href="#quest:getplanarseg">quest:getplanarseg</a>
+</ul>
+<h2>Subprojekte <a name="proj"></A></h2>
+<P>
+
+<P>
+<h3>Funktion <tt>main()</tt> in <tt>room_analysis_test.cpp</tt> als Pseudocode schreiben (18.1.13 bis ) <a name="proj:roomAnaPseudo"></A></h3>
+<P>
+
+<P>
+Die hoffentlich verstandenen Methoden k&#246;nnen dann f&#252;r die visuelle Darstellung
+des Merkmalsraums verwendet werden. Siehe Folgeprojekt <a href="#proj:featuresvis">Merkmalsraum von planaren Patches visuell darstellen (18.1.13 bis )</a>.
+
+<P>
+<b>Next Actions.</b> <ul>
+<li> 21.1.13: <a name="na:dokGet3Dcorner"></A> Funktion <tt>get3Dcorners()</tt> dokumentieren
+</ul>
+
+<b>Pseudocode.</b> <a name="roomana:main"></A>
+
+<P>
+Pseudocode zum Verst&#228;ndnis des Quelltextes.
+
+<P>
+<blockquote>    <!-- begin verbatim block  -->
+<pre>
+cloud // Eingelesene Punktwolke
+planes = extractPlanesHough(cloud)
+planar_segments = getPlanarSegments(planes) // verwirf Segmente mit wenigen
+                                            // Punkten
+splitMultipleConcaveHulls(planar_segments)
+removeSmallSegments(planar_segments)
+[ceiling_indices, floor_indices] = findFloorAndCeilingSegments(planar_segments)
+best_ceiling_index = selectClosestSegmentByCentroid(planar_segments,
+                                                    ceiling_indices)
+floor_plane = floor_indices[0]
+ceiling_plane = ceiling_indices[best_ceiling_index]
+removeAllHorizontalSegments(planar_segments)
+adjacency_matrix = obtainAdjacencyMatrix(planar_segments)
+writeAdjacencyToDot(adjacency_matrix, out.dot)
+[ceiling_border_to_cluster_map, clusters] = clusterSegments(planar_segments)
+distance_threshold = 0.1
+assignClusterProperties(planar_segments,
+                        ceiling_borders,
+                        adjacency_matrix,
+                        floor_plane,
+                        ceiling_plane,
+                        out clusters,
+                        distance_threshold)
+// Properties of 'cluster': 'number_points', 'neighboring_floor',
+//                          'neighboring_ceiling', 'covered_area',
+//                          'neighboring_clusters', 'overlap_border',
+//                          'plane_coefficients'
+
+// Clusters with most overlap with the ceiling borders are selected.
+wall_clusters = pick_best_wall_clusters(ceiling_border_to_cluster_map)
+
+// Type('connected_cluster_edges') = List('int', 'int').
+connected_cluster_edges = getClusterConnections(planar_segments,
+                                                clusters,
+                                                wall_clusters)
+cluster_adjacency_matrix = getClusterAdjacency(connected_cluster_edges)
+connected_clusters = getOrderedNodes(connected_cluster_edges)
+
+// Type('circular_clusters') = bool.
+circular_clusters = cluster_adjacency_matrix[connected_clusters.front(),
+                                             connected_clusters.back()]
+
+</pre>
+</blockquote>   <! -- end verbatim block -->
+
+<P>
+<h4>Probleme / Fragen zu <tt>room_analysis_test.cpp</tt> <a name="proj:roomAnaPseudo:problems"></A></h4>
+<P>
+
+<P>
+<b>Probleme.</b> <ul>
+<li> <tt>/eda/media/pcd/indoor/living-room01-xyzi-binary.pcd</tt>: Segmentation
+  fault in Zeile 443, Aufruf von <tt>getOrderedNodes</tt> schl&#228;gt fehl, da
+  <tt>connected_cluster_edges</tt> die L&#228;nge 0 hat
+<li> <tt>/eda/media/pcd/indoor-planar-outliers.pcd</tt>: Segmentation fault in
+  Zeile 443, Aufruf von <tt>getOrderedNodes</tt> schl&#228;gt fehl, da
+  <tt>connected_cluster_edges</tt> die L&#228;nge 0 hat.
+<li> <tt>ceiling_border_to_cluster_map</tt> hat die L&#228;nge 0
+
+<ul>
+  <li> <tt>wall_clusters</tt> hat die L&#228;nge 0
+</ul>
+
+</ul>
+
+<b>Offene Fragen.</b> <ul>
+<li> 21.1.13: <a name="quest:planeExtractorSegment"></A> Wo ist die Implementierung von
+  <tt>hough3d::Hough3DPlaneExtractor<PointT>.segment()</tt> ?
+<li> 21.1.13: <a name="quest:segment"></A> Was genau berechnet
+  <tt>hough3d::Hough3DPlaneExtractor<PointT>.segment()</tt> ?
+<li> 21.1.13: <a name="quest:splitHull"></A> Was genau berechnet
+  <tt>common::splitMultipleConcaveHulls()</tt> ?
+<li> 21.1.13: <a name="quest:clusterSegments"></A> Was macht die Methode
+  <tt>clusterSegments()</tt> ?
+<li> 21.1.13: <a name="quest:ceilingBorders"></A> Was soll in der Variable
+  <tt>ceiling_borders</tt> stehen? Sie wird nur deklariert, aber nicht mit Werten
+  gef&#252;llt.
+<li> 21.1.13: <a name="quest:getOrderedNodes"></A> Was berechnet <tt>getOrderedNodes</tt> ?
+  Kommentar zur Methode ist nicht leicht zu verstehen.
+</ul>
+
+<b>Beantwortete Fragen.</b> <ul>
+<li> 21.1.13: <a name="quest:getplanarseg"></A> Was genau berechnet
+  <tt>getPlanarSegments()</tt> ?
+
+<ul>
+  <li> 21.1.2013:
+</ul>
+
+</ul>
+
+<blockquote>    <!-- begin verbatim block  -->
+<pre>
+Fuer jedes Segment 's'
+  Falls 's' weniger als drei Punkte enthaelt, ueberspringe 's', ansonsten
+    Lege Obekt 'o' vom Typ 'PlaneSegment&lt;PointT&gt; an
+    Haenge 'o' der Liste 'segments' an
+  Gib 'segments' zurueck
+</pre>
+</blockquote>   <! -- end verbatim block -->
+
+<P>
+<h3>Merkmalsraum von planaren Patches visuell darstellen (18.1.13 bis ) <a name="proj:featuresvis"></A></h3>
+<P>
+
+<P>
+Die Merkmale H&#246;he, Winkel zur z-Achse und Fl&#228;cheninhalt sollen f&#252;r jedes Patch
+visuell dargestellt werden. Als Vorbild kann 
+<a href="../papers/xiong2010using.pdf">Xiong, 2010, S.7</a> verwendet werden.
+
+<P>
+<b>Tipps von Kotth&#228;user zur Visualisierung des Merkmalsraums.</b> <ul>
+<li> <tt>getHorizontalAngle</tt> zur Bestimmung des Winkels zwischen Normalenvektor und
+  der z-Achse
+<li> <tt>PlanarSegment</tt>, <tt>PlanarPolygon</tt> zur Bestimmung des Fl&#228;cheninhalts eines
+  Patches
+<li> <tt>visualizePlanarSegments</tt> zur Visualisierung und zum Labeln von Patches
+<li> <tt>selectClosestSegmentByCentroid</tt> zur Bestimmung der H&#246;he eines Patches
+<li> Welche H&#246;he hat ein vertikaler Patch?
+<li> Achtung: manche Segmentierungsalgorithmen indizieren die Patches bei jedem
+  Aufruf anders (Stichwort RANSAC)
+</ul>
+<h3>Entscheidung: Kontextfreie Grammatik vs. Conditional Random Fields <a name="proj:decisionCFGvsCRF"></A></h3>
+<P>
+
+<P>
+Zentrale Frage: Welche Methode soll ich in meiner Studienarbeit betrachten: CFG
+oder CRF? CRF ist ein Verfahren aus dem Bereich der statistischen Lernverfahren.
+Mit CFGs werden Klassifizierungsregeln h&#228;ndisch festgelegt. Jedoch werden in
+<a href="#ref:lit:toshev10">ref:lit:toshev10</a> CFGs eingesetzt und <em>zus&#228;tzlich</em> Parameter aus
+Trainingsdaten gelernt.
+
+<P>
+Paper f&#252;r CRF:
+
+<ul>
+<li> <a href="#ref:lit:xiong10">ref:lit:xiong10</a>
+<li> <a href="#ref:lit:adan11">ref:lit:adan11</a>
+</ul>
+
+Paper f&#252;r CFG:
+
+<ul>
+<li> <a href="#ref:lit:toshev10">ref:lit:toshev10</a>
+</ul>
+<h4>Next Actions <a name="proj:decisionCFGvsCRF:nextActions"></A></h4>
+<P>
+
+<P>
+
+<ul>
+<li> <a name="proj:decisionCFGvsCRF:brainstorm"></A>
+  25.01.13:
+  Pro und Contra der beiden Verfahren bez&#252;glich meiner Studienarbeit schriftlich
+  ausarbeiten und eine Entscheidung treffen.
+<li> <a name="proj:decisionCFGvsCRF:informKott"></A>
+  25.01.13:
+  <a href="#ref:persons:kotthaeu">ref:persons:kotthaeu</a> &#252;ber Entscheidung informieren.
+</ul>
+<h4>Done Actions <a name="proj:decisionCFGvsCRF:doneActions"></A></h4>
+<P>
+
+<P>
+<h2>Referenzmaterial <a name="ref"></A></h2>
+<P>
+
+<P>
+<h3>Literatur <a name="ref:lit"></A></h3>
+<P>
+
+<P>
+Alle ausgedruckten Materialien haben '[P]' vor dem Autor stehen. Weitere
+von <a href="#ref:persons:kotthaeu">ref:persons:kotthaeu</a> gesammelte Literatur befindet sich in
+<a href="/home/kotthaeu/public/references/architecture"><tt>/home/kotthaeu/public/references/architecture</tt></a>
+
+<P>
+<h4>gelesen <a name="ref:lit:read"></A></h4>
+<P>
+
+<P>
+
+<ul>
+<li> <a name="ref:lit:adan11"></A>
+  [P] Adan, A., Xiong, X., Akinci, B., & Huber, D. (2011). Automatic creation of
+  semantically rich 3D building models from laser scanner data. Proceedings of
+  the 28th International &#8230;, 343&#8211;348. Retrieved from
+  <a href="http://www.iaarc.org/publications/fulltext/S10-1.pdf">here</a>.
+
+<ul>
+  <li> <a href="../papers/klinger2007classical.pdf"><tt>../papers/klinger2007classical.pdf</tt></a>
+</ul>
+
+<li> <a name="ref:lit:toshev10"></A>
+  [P] Toshev, A., Mordohai, P., & Taskar, B. (2010). Detecting and parsing
+  architecture at city scale from range data. 2010 IEEE Computer Society
+  Conference on Computer Vision and Pattern Recognition, 398&#8211;405.
+  doi:10.1109/CVPR.2010.5540187
+
+<ul>
+  <li> <a href="../papers/toshev2010detecting.pdf"><tt>../papers/toshev2010detecting.pdf</tt></a>
+  <li> Notizen: <a name="ref:lit:toshev10:notes"></A>
+
+<ul>
+    <li> Betrachtung des Volumens f&#252;r meine Zwecke nicht sinnvoll.
+</ul>
+
+</ul>
+
+<li> <a name="ref:lit:xiong10"></A>
+  [P] Xiong, X., & Huber, D. (2010). Using Context to Create Semantic 3D Models of
+  Indoor Environments. Procedings of the British Machine Vision Conference 2010,
+  45.1&#8211;45.11. doi:10.5244/C.24.45
+
+<ul>
+  <li> <a href="../papers/xiong2010using.pdf"><tt>../papers/xiong2010using.pdf</tt></a>
+</ul>
+
+</ul>
+<h4>ungelesen <a name="ref:lit:unread"></A></h4>
+<P>
+
+<P>
+
+<ul>
+<li> <a name="ref:lit:klinger07"></A>
+  Klinger, R., & Tomanek, K. (2007). Classical probabilistic models and
+  conditional random fields (pp. 1&#8211;31). Dortmund. Retrieved from
+  <a href="http://www.scai.fraunhofer.de/fileadmin/images/bio/data_mining/paper/crf_klinger_tomanek.pdf">here</a>.
+
+<ul>
+  <li> <a href="../papers/klinger2007classical.pdf"><tt>../papers/klinger2007classical.pdf</tt></a>
+</ul>
+
+<li> <a name="ref:lit:lafferty01"></A>
+  [P] Lafferty, J., McCallum, A., & Pereira, F. (2001). Conditional random
+  fields: Probabilistic models for segmenting and labeling sequence data,
+  2001(Icml), 282&#8211;289. Retrieved from <a href="http://repository.upenn.edu/cis_papers/159/">here</a>.
+
+<ul>
+  <li> <a href="../papers/lafferty2001conditional.pdf"><tt>../papers/lafferty2001conditional.pdf</tt></a>
+</ul>
+
+<li> <a name="ref:lit:sutton06"></A>
+  Sutton, C., & McCallum, A. (2006). chapter 1: An introduction to Conditional
+  Random Fields for Relational Learning, (x). Retrieved from
+  <a href="http://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:1+An+Introduction+to+Conditional+Random+Fields+for+Relational+Learning#2">here</a>.
+
+<ul>
+  <li> <a href="../papers/sutton2006introduction.pdf"><tt>../papers/sutton2006introduction.pdf</tt></a>
+</ul>
+
+<li> <a name="ref:lit:wilke00"></A>
+  Wilke, W. (2000). Segmentierung und Approximation gro&#223;er Punktwolken.
+  Reverse Engineering, 1&#8211;203. Retrieved from
+  <a href="http://tuprints.ulb.tu-darmstadt.de/255/">here</a>.
+
+<ul>
+  <li> <a href="../papers/wilke2002segmentierung_01.pdf"><tt>../papers/wilke2002segmentierung_01.pdf</tt></a>
+  <li> <a href="../papers/wilke2002segmentierung_02.pdf"><tt>../papers/wilke2002segmentierung_02.pdf</tt></a>
+  <li> <a href="../papers/wilke2002segmentierung_03.pdf"><tt>../papers/wilke2002segmentierung_03.pdf</tt></a>
+</ul>
+
+</ul>
+<h3>Internetquellen <a name="ref:internetsources"></A></h3>
+<P>
+
+<P>
+
+<ul>
+<li> <a name="ref:internetsources:pclSegmentationMethods"></A>
+  Liste von Segmentierungsverfahren in der PCL-Dokumentation.
+
+<ul>
+  <li> <a href="http://pointclouds.org/documentation/tutorials/#segmentation-tutorial"><tt>http://pointclouds.org/documentation/tutorials/#segmentation-tutorial</tt></a>
+</ul>
+
+<li> <a name="ref:internetsources:getwiki"></A>
+  GET Lab Wiki
+
+<ul>
+  <li> <a href="https://getwww.uni-paderborn.de/wiki/msr/index.php/Hauptseite"><tt>https://getwww.uni-paderborn.de/wiki/msr/index.php/Hauptseite</tt></a>
+</ul>
+
+<li> <a name="ref:internetsources:wikipediaSegmentation"></A>
+  englischer Wikipedia-Artikel zur Segmentierung
+
+<ul>
+  <li> <a href="https://en.wikipedia.org/wiki/Segmentation_%28image_processing%29"><tt>https://en.wikipedia.org/wiki/Segmentation_%28image_processing%29</tt></a>
+</ul>
+
+</ul>
+<h3>Glossar <a name="ref:gloss"></A></h3>
+<P>
+
+<P>
+
+<dl>
+<dt>Hough-Transforation:<dd> 
+  <a name="ref:gloss:houghtrans"></A>
+<dt>Octree:<dd> 
+  <a name="ref:gloss:octree"></A>
+<dt>Patch:<dd> 
+  <a name="ref:gloss:patch"></A>
+<dt>RANSAC:<dd> 
+  <a name="ref:gloss:ransac"></A>
+<dt>Segment:<dd> 
+  <a name="ref:gloss:segment"></A>
+  Siehe <a href="#ref:gloss:segmentierung">ref:gloss:segmentierung</a>.
+<dt>Segmentierung:<dd> 
+  <a name="ref:gloss:segmentierung"></A>
+  Ein Algorithmus, der jeden Punkt in einer Punktwolke mit einem Label versieht.
+  Alle Punkte, die dasselbe Label haben, geh&#246;ren nach einem gew&#228;hlten
+  Kriterium zusammen. Kriterien sind beispielsweise
+
+<ul>
+  <li> Normalenvektor zeigt (ungef&#228;hr) in dieselbe Richtung
+  <li> &#228;hnliche Farbe.
+</ul>
+
+  Siehe auch: 
+
+<ul>
+  <li> <a href="#ref:internetsources:wikipediaSegmentation">ref:internetsources:wikipediaSegmentation</a>
+  <li> <a href="#ref:internetsources:pclSegmentationMethods">ref:internetsources:pclSegmentationMethods</a>
+</ul>
+
+</dl>
+<h3>Personen <a name="ref:persons"></A></h3>
+<P>
+
+<P>
+
+<ul>
+<li> <a name="ref:persons:kotthaeu"></A>
+  Tobias Kotth&#228;user, kotthaeuser@get.upb.de, Doktorand, betreut Studienarbeit
+  von <a href="#ref:persons:puels">ref:persons:puels</a>.
+<li> <a name="ref:persons:puels"></A>
+  Marc P&#252;ls, mpuels@upb.de, Autor dieses Dokuments.
+<li> <a name="ref:persons:toelke"></A>
+  Christian T&#246;lke, christian@bielefeldertg.de, arbeitet im Rahmen seiner
+  Bachelorarbeit auch an Punktwolkenverarbeitung und Detektion von Tischen.
+</ul>
+<h3>Beispiele guter Abschlussarbeiten (25.01.13) <a name="ref:exampleTheses"></A></h3>
+<P>
+
+<P>
+Folgende Abschlussarbeiten wurden mir von <a href="#ref:persons:kotthaeu">ref:persons:kotthaeu</a> gegeben, um
+Beispiele f&#252;r gut benotete Abschlussarbeiten zu sehen.
+
+<P>
+
+<ul>
+<li> <a href="/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/ba01.pdf"><tt>/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/ba01.pdf</tt></a>
+<li> <a href="/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/ba02.pdf"><tt>/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/ba02.pdf</tt></a>
+<li> <a href="/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/ba03.pdf"><tt>/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/ba03.pdf</tt></a>
+<li> <a href="/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/da01.pdf"><tt>/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/da01.pdf</tt></a>
+<li> <a href="/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/da02.pdf"><tt>/home/mpuels/Studienarbeit/doc/referenceMaterial/goodTheses/da02.pdf</tt></a>
+</ul>
+<h3>Kommentartypen beim Durcharbeiten von Papern <a name="ref:commentTypes"></A></h3>
+<P>
+
+<P>
+
+<ul>
+<li> Unbekanntes Wort/Fachwort: Nachschlagen, Erkl&#228;rung auf Paper notieren,
+  in Liste sammeln?
+<li> Unklarheiten, nicht verstandene Zusammenh&#228;nge: Andere Fragen,
+  recherchieren, in Liste sammeln?
+<li> Assoziationen: An Rand schreiben
+<li> Schl&#252;sselbegriffe, "Hauptideen" eines Absatzes/Abschnitts: An den Rand
+  schreiben
+<li> durch Paper hervorgerufene Ideen/L&#246;sungsans&#228;tze: An Rand notieren, in
+  Liste sammeln!
+</ul>
+<h3>Thema der Studienarbeit und Ordnerstruktur <a name="ref:filestructure3dsa"></A></h3>
+<P>
+
+<P>
+<b>Grobes Thema der Studienarbeit.</b> Die Studienarbeit besch&#228;ftigt sich mit der Klassifikation von Patches
+(<a href="#ref:gloss:patch">ref:gloss:patch</a>) in eine der Klassen
+
+<P>
+
+<ul>
+<li> Wand
+<li> Boden
+<li> Decke
+<li> Clutter (sonstige Gegenst&#228;nde im Raum).
+</ul>
+
+<b>Ordnerstruktur von 3dsa.</b> Das Fachgebiet GET hat ein SVN-Repository
+(<a href="get.upb.de/proj/getbot/repos/trunk"><tt>get.upb.de/proj/getbot/repos/trunk</tt></a>), in dem alle Projekte
+versioniert werden, die mit dem GETBOT zu tun haben. Um eine Arbeitskopie
+auszuchecken
+
+<P>
+<blockquote>    <!-- begin verbatim block  -->
+<pre>
+svn co svn+ssh://mpuels@get.upb.de/proj/getbot/repos/trunk getbot
+</pre>
+</blockquote>   <! -- end verbatim block -->
+
+<P>
+eingeben. Diese Studienarbeit besch&#228;ftigt sich mit der <tt>3d scene analysis</tt>, was
+ein Teilprojekt des GETBOT-Projekts ist. Es befindet sich im Ordner
+<a href="../../getbot/3dsa"><tt>../../getbot/3dsa</tt></a>. 
+
+<P>
+Die Algorithmen bez&#252;glich dieser Aufgabe befinden sich in
+<a href="../../getbot/3dsa/room_analysis"><tt>../../getbot/3dsa/room_analysis</tt></a>.
+
+<P>
+Der von <a href="#ref:persons:kotthaeu">ref:persons:kotthaeu</a> empfohlene Workflow ist:
+
+<P>
+
+<ol>
+<li> zun&#228;chst eine cpp-Datei <tt>x.cpp</tt> in <a href="../../getbot/3dsa/room_analysis/test"><tt>../../getbot/3dsa/room_analysis/test</tt></a>
+  erstellen, die einen zu testenden Algorithmus enth&#228;lt
+<li> wenn <tt>x.cpp</tt> erfolgreich getestet wurde, den implementierten Algorithmus in
+  die <tt>room_analysis</tt> -Bibliothek einpflegen durch einf&#252;gen des Quelltexts in
+  <a href="../../getbot/3dsa/room_analysis/src"><tt>../../getbot/3dsa/room_analysis/src</tt></a> und
+  <a href="../../getbot/3dsa/room_analysis/include"><tt>../../getbot/3dsa/room_analysis/include</tt></a>.
+</ol>
+
+<b>Point Cloud Data.</b> Punktwolken, auf denen die Algorithmen getestet werden k&#246;nnen, befinden sich in
+<a href="/eda/media/pcd"><tt>/eda/media/pcd</tt></a>.
+
+<P>
+<h3>Point Cloud Data <a name="ref:pcd"></A></h3>
+<P>
+
+<P>
+
+<ul>
+<li> <a href="/eda/media/pcd/indoor-planar-outliers.pcd"><tt>/eda/media/pcd/indoor-planar-outliers.pcd</tt></a>
+
+<ul>
+  <li> Scan eines B&#252;ros
+  <li> wird als Testpunktwolke von <a href="#ref:persons:toelke">ref:persons:toelke</a> verwendet
+</ul>
+
+</ul>
+<h3>Unsortierte Kommentare <a name="ref:unsortedComments"></A></h3>
+<P>
+
+<P>
+F&#252;r diese Aussagen lohnt es sich (noch) nicht einen eigenen Abschnitt in
+<a href="#ref">Referenzmaterial</a> zu anzulegen. Falls Cluster erkennbar werden, m&#252;ssen jedoch Abschnitte
+angelegt werden.
+
+<P>
+
+<ul>
+<li> in der PCL implementierte Algorithmen zur Eliminierung von Ausrei&#223;ern sind
+  sehr rechenintensiv (vgl.
+  <a href="http://docs.pointclouds.org/trunk/group__filters.html">Filter</a>
+  in der PCL), daher sollten andere Algorithmen verwendet werden, die f&#252;r den
+  speziellen Anwendungsfall schneller sind.
+</ul>
+
+</body>
+</html>
+    
