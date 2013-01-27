@@ -1,0 +1,10 @@
+TOOD:
+    * Implement command line arguments:
+        * input file
+        * output file
+    * Document command line arguments
+    * Find out way to inject TOC into existing html file
+    * Implement injecting TOC into existing html file
+        * Idea: Add command line argument `injectLine` of type integer, giving
+          the line number of the original file where to inject the TOC text.
+    * Write a short doc comment for each method and class

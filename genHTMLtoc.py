@@ -1,9 +1,29 @@
 #!/usr/bin/python
 
-"""Generate a table of contents from the encountered h1,...,h4-Tags
+"""Generate a table of contents from the encountered h1,...,h4-tags
 
+Read in an HTML file, record each h`n`-tag (`n` = 1 ... 4) and output a TOC.
+E.g. if the input is
 
+    <h1>Level 1 First <a name="ref1"></a></h1>
+    <h1>Level 1 Second <a name="ref2"></a></h1>
+        <h2>Level 2 First <a name="ref3></a><h2>
+            <h3>Level 3 First <a name="ref4"></a></h3>
+    <h1>Level 1 Third <a name="ref5"></a></h1>
 
+the produced TOC is
+
+    <ul>
+        <li><a href="#ref1">Level 1 First</a></li>
+        <li><a href="#ref2">Level 1 Second</a></li>
+        <ul>
+            <li><a href="#ref3">Level 2 First</a></li>
+            <ul>
+                <li><a href="#ref4">Level 3 First</a></li>
+            </ul>
+        </ul>
+        <li><a href="#ref5">Level 1 Third</a></li>
+    </ul>
 """
 
 from HTMLParser import HTMLParser
