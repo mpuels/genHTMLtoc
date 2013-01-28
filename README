@@ -1,12 +1,23 @@
 Next Actions:
-    * (26.01.13): Implement command line arguments:
-        * input file
-        * output file
-    * (26.01.13): Document command line arguments
-    * (26.01.13): Find out way to inject TOC into existing html file
-    * (26.01.13): Implement injecting TOC into existing html file
-        * Idea: Add command line argument `injectLine` of type integer, giving
-          the line number of the original file where to inject the TOC text.
-    * (26.01.13): Write a short doc comment for each method and class
 
 Done:
+    * 26.01.13 (DONE 28.01.13):
+      Find out way to inject TOC into existing html file
+      * Solution: Argument `n`, which specifies the line number of input file,
+        where TOC shall be inserted.
+
+    * 26.01.13 (DONE 28.01.13):
+      Implement command line arguments:
+        * input file
+        * output file
+
+    * 26.01.13 (DONE 28.01.13):
+      Implement injecting TOC into existing html file
+        * Idea: Add command line argument `injectLine` of type integer, giving
+          the line number of the original file where to inject the TOC text.
+
+    * 26.01.13 (DONE 28.01.13):
+      Document command line arguments
+
+    * 26.01.13 (DONE 28.01.13):
+      Write a short doc comment for each method and class

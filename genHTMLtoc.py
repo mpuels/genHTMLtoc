@@ -31,19 +31,14 @@ import argparse
 import fileinput
 
 def parse_args():
-    """
-    prog in.html > toc.html
-    prog in.html -o out.html -l 23
-    prog INHTML [-o OUTHTML N]
-    """
-    parser = argparse.ArgumentParser(description='Generate table of contents.')
+    parser = argparse.ArgumentParser(description='Generate table of contents for the html file INHTML. If no `-o` argument is present, the TOC is written to stdout. Otherwise INTHML is copied to OUTHML, with the TOC inserted at line N.')
     parser.add_argument("infile",
                         metavar="INHTML",
                         help="Input html file.")
     parser.add_argument("-o", "--out",
                         metavar=("OUTHTML", "N"),
                         nargs=2,
-                        help="TOC is written together with INHTML to OUTHTML. The TOC is inserted at line N into INHTML.")
+                        help="TOC is written together with INHTML to OUTHTML. The TOC is inserted at line N of INHTML.")
     args = parser.parse_args()
     return args
 
@@ -68,6 +63,16 @@ class MyHTMLParser(HTMLParser):
             self.prevtitle = data
 
 def generateTOC(level_title_ref_list):
+    """Generate the TOC according to the list of triples `level_title_ref_list`
+
+    The list of triples are of the form (`L`, `T`, `R`), where `L` is an HTML
+    heading (e.g. "h1", "h2", ..., "h6"), `T` is the content of the heading
+    (e.g. "Chapter 1", "Section 2") and `R` is the value of a name attribute in
+    a `<a>`-tag, like in '<a name="`R`"></a>'.
+
+    The resulting TOC is returned as a string, containing new lines.
+
+    """
     currLevel = 2;
     ret = "<ul>\n"
     for level, title, ref in level_title_ref_list:
