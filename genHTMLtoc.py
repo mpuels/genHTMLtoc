@@ -27,6 +27,25 @@ the produced TOC is
 """
 
 from HTMLParser import HTMLParser
+import argparse
+import fileinput
+
+def parse_args():
+    """
+    prog in.html > toc.html
+    prog in.html -o out.html -l 23
+    prog INHTML [-o OUTHTML N]
+    """
+    parser = argparse.ArgumentParser(description='Generate table of contents.')
+    parser.add_argument("infile",
+                        metavar="INHTML",
+                        help="Input html file.")
+    parser.add_argument("-o", "--out",
+                        metavar=("OUTHTML", "N"),
+                        nargs=2,
+                        help="TOC is written together with INHTML to OUTHTML. The TOC is inserted at line N into INHTML.")
+    args = parser.parse_args()
+    return args
 
 class MyHTMLParser(HTMLParser):
     prevtag = ""
@@ -53,7 +72,6 @@ def generateTOC(level_title_ref_list):
     ret = "<ul>\n"
     for level, title, ref in level_title_ref_list:
         level_ = int(level[1])
-        print level_, title, ref
         # <li><a href="#currentAction">Aktuelle Aktion</a></li>
         toc_entry = '<li><a href="#' + ref + '">' + title + "</a></li>\n"
         open_or_close_ul = ""
@@ -69,16 +87,24 @@ def generateTOC(level_title_ref_list):
     return ret
 
 def main():
-    filename = "INBOX.html"
-    htmlfile = open(filename, 'r')
-    htmlfilestr = htmlfile.read()
+    args = parse_args()
+    infile = args.infile
     parser = MyHTMLParser()
-    parser.feed(htmlfilestr)
-    for t in parser.titlelist:
-        print t
+    parser.feed(open(infile, 'r').read())
+
     toc = generateTOC(parser.titlelist)
-    tocfilename = "TOC.html"
-    tocfile = open(tocfilename, 'w')
-    tocfile.write(toc)
+
+    if (args.out == None):
+        print toc
+    else:
+        toc_linenumber = args.out[1]
+        infilelines = open(infile, 'r').readlines()
+        print "len(htmlfilelines) = ", len(infilelines)
+        outhtmllines = infilelines[:int(toc_linenumber)]
+        outhtmllines.append(toc)
+        outhtmllines = outhtmllines + infilelines[int(toc_linenumber):]
+        outfilename = args.out[0]
+        outfile = open(outfilename, 'w')
+        outfile.writelines(outhtmllines)
 
 main()
