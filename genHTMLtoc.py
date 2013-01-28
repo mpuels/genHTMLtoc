@@ -102,12 +102,13 @@ def main():
     if (args.out == None):
         print toc
     else:
-        toc_linenumber = args.out[1]
+        toc_linenumber = int(args.out[1])
         infilelines = open(infile, 'r').readlines()
-        print "len(htmlfilelines) = ", len(infilelines)
-        outhtmllines = infilelines[:int(toc_linenumber)]
+
+        outhtmllines = infilelines[:toc_linenumber]
         outhtmllines.append(toc)
-        outhtmllines = outhtmllines + infilelines[int(toc_linenumber):]
+        outhtmllines = outhtmllines + infilelines[toc_linenumber:]
+
         outfilename = args.out[0]
         outfile = open(outfilename, 'w')
         outfile.writelines(outhtmllines)
