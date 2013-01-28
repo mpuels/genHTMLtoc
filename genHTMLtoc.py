@@ -51,6 +51,9 @@ class MyHTMLParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if self.prevtag in self.titletags and tag == "a":
             nameattrs = [a[1] for a in attrs if a[0] == "name"]
+            # Ignore a <a>-tag, which has now "name" attribute.
+            if len(nameattrs) == 0:
+                return
             self.titlelist.append((self.prevtag,
                                    self.prevtitle,
                                    nameattrs[0]))
