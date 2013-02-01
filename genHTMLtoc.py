@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """Generate a table of contents from the encountered h1,...,h4-tags
 
